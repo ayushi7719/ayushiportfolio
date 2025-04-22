@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BRANDTZ | Blending Creativity & Strategy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #D1EAF0;
+      color: #013A63;
+    }
+
+    header {
+      background-color: #013A63;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 0 0 0px 0px;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .cta-top {
+      background-color: beige;
+      text-align: center;
+      padding: 2rem 2rem;
+    }
+
+    .cta-top button {
+      background-color: #ed2939;
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .cta-top button:hover {
+      transform: scale(1.05);
+    }
+
+    .hero {
+      background-color: #f0faff;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: start;
+      padding: 6rem 2rem;
+      gap: 1rem;
+      flex-wrap: wrap;
+      border-radius: 10px;
+      margin: 1rem;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+      font-size: 1rem;
+    }
+
+    .hero-img {
+      flex: 1;
+      text-align: center;
+    }
+
+    .hero-img img {
+      width: 90%;
+      max-width: 250px;
+      border-radius: 12px;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      background-color: #EAF7FB;
+      margin: 1rem;
+      border-radius: 10px;
+      animation: fadeIn 1s ease-in;
+    }
+
+    .section h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #013A63;
+      color: #D1EAF0;
+      border-radius: 8px;
+      display: inline-block;
+    }
+
+    .why-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 4rem;
+    }
+
+    .zigzag {
+      flex-direction: row-reverse;
+    }
+
+    .section-text {
+      max-width: 300px;
+    }
+
+    .why-content img,
+    .works-gallery .flash-card img {
+      width: 220px;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .works-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      margin-top: 2rem;
+      align-items: center;
+    }
+
+    .flash-card {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .flash-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .flash-card:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .card-text {
+      max-width: 300px;
+    }
+
+    .footer {
+      background-color: #013A63;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-family: 'Pacifico', cursive;
+      font-size: 1.2rem;
+      border-radius: 0px 0px 0 0;
+    }
+
+    #email-form {
+      padding: 1rem 1rem;
+      text-align: center;
+      background-color: #ed2939;
+      border-radius: 10px;
+      margin: 1rem;
+    }
+
+    #email-form input {
+      padding: 0.5rem;
+      margin: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    #email-form button {
+      background-color: #013A63;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>BRANDTZ</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#works">Works</a>
+      <a href="#email-form">Contact</a>
+    </nav>
+  </header>
+
+  <section class="cta-top">
+    <button onclick="document.getElementById('email-form').scrollIntoView({ behavior: 'smooth' });">Let's Cook Something Magic Together</button>
+  </section>
+
+  <section class="hero" id="about">
+    <div class="hero-text">
+      <h2>Hello,</h2>
+      <h2> I'm Ayushi</h2>
+      <p>A passionate creator blending design, strategy & storytelling.
+        Currently pursuing BBA in Digital Business & Entrepreneurship at IIM Bangalore, I’m a digital designer, brand builder, and creative enthusiast. I specialize in creating impactful digital visuals—from brand posters and invitations to social content and user-focused design.
+        Currently I'm working on building my own brand Auraw, a slow-fashion clothing brand designed to empower women with style that fits every height and every vibe.
+        Through BRANDTZ, I bring my love for branding, visuals, and creative expression to life—with a touch of pastel charm and purpose-driven design.
+        Let’s build something meaningful, one pixel with magic at a time.</p>
+    </div>
+    <div class="hero-img">
+      <img src="https://i.imgur.com/tG7xjDw.jpeg" alt="Ayushi photo">
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <div class="why-content">
+      <img src="https://i.imgur.com/FRwupdo.jpeg" alt="Skill Image">
+      <div class="section-text">
+        <h3>Why Work With Me?</h3>
+        <p>I blend sleek design with intuitive features, combining strategy and storytelling to elevate every visual.</p>
+        <ul>
+          <li>Canva Specialist</li>
+          <li>Digital Marketing</li>
+          <li>Idea Execution</li>
+          <li>Graphic Designing</li>
+          <li>Digital Invitation Cards</li>
+          <li>Branding</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="why-content zigzag">
+      <img src="https://i.imgur.com/BirSPR3.jpeg" alt="Project Image">
+      <div class="section-text">
+        <h3>Projects</h3>
+        <ul>
+          <li>Auraw – A clothing brand redefining inclusivity and style. Designed for every woman, with dresses that embrace all heights, offering quality and affordability.</li>
+          <li>Digital Poster Studio – A micro-venture that transformed ₹250 into custom digital designs for small businesses, blending creativity with strategy to boost their brand presence.</li>
+          <li>BRANDTZ – My creative portfolio, where design meets strategy. A showcase of my work with an expressive, pastel-infused aesthetic and impactful storytelling.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="works">
+    <h3>My Works</h3>
+    <div class="works-gallery">
+      <div class="flash-card">
+        <img src="https://i.imgur.com/ZTKIpLB.jpeg" alt="Work 1">
+        <div class="card-text">
+          <p>A sleek food poster highlighting its best dishes that increased local restaurant reach through vibrant color contrast and minimal layout.</p>
+        </div>
+      </div>
+      <div class="flash-card">
+        <img src="https://i.imgur.com/39il77d.jpeg" alt="Work 2">
+        <div class="card-text">
+          <p>A promotional branding card designed to evoke elegance with a personalized, handcrafted vibe.</p>
+        </div>
+      </div>
+      <div class="flash-card">
+        <img src="https://i.imgur.com/l3dX97k.jpeg" alt="Work 3">
+        <div class="card-text">
+          <p>A modern promotional banner for a pizza shop, blending bold fonts with soft aesthetics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="email-form">
+    <h3>Let's Connect</h3>
+    <form onsubmit="alert('Thanks for connecting!'); return false;">
+      <input type="email" name="email" placeholder="Your Email" required />
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    we create with love and care<br>
+    <p>@ayushipaul80@gmail.com</p>
+    <p>All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
